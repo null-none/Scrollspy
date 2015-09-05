@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Scrollspy</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.5.1.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<style>
+			.block {
+				display: block;
+				height: 300px;
+			}
+			.fixed {
+				position: fixed;
+			}
+			.header {
+				height: 200px;
+				display: block;
+			}
+			.header ul li {
+				display: table;
+			}
+		</style>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="Scrollspy">
+			<div class="header">
+				<div class="container" id="navbar" scroll-change-link>
+					<ul class="nav nav-tabs fixed text-center">
+					  <li role="presentation" class="active"><a href="#step-1">Step 1</a></li>
+					  <li role="presentation"><a href="#step-2">Step 2</a></li>
+					  <li role="presentation"><a href="#step-3">Step 3</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div id="step-1" class="block">
+				Step 1
+				</div>
+				<div id="step-2" class="block">
+				Step 2
+				</div>
+				<div id="step-3" class="block">
+				Step 2
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
